@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EG+Garamond:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Pomodoro App</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <h1>pomodoro</h1>
+      <div class="timer-input">
+        <label for="timerInput">Set timer (minutes):</label>
+        <input type="number" id="timerInput" min="1" max="60" value="25" />
+        <button id="setTimer">Set</button>
+      </div>
+      <div id="notification" class="notification hidden"></div>
+      <div class="app-circle">
+        <div class="circle-shape">
+          <div class="semi-circle right-side circle-mask"></div>
+          <div class="semi-circle right-side circle"></div>
+          <div class="semi-circle left-side circle-mask"></div>
+          <div class="semi-circle left-side circle"></div>
+        </div>
+        <div class="app-counter-box">
+          <p><span class="minutes">25</span>:<span class="seconds">00</span></p>
+        </div>
+        <div class="button-container">
+          <button class="btn-start"><i class="fas fa-play"></i></button>
+          <button class="btn-pause"><i class="fas fa-pause"></i></button>
+          <button class="btn-reset"><i class="fas fa-sync-alt"></i></button>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
